@@ -2,6 +2,89 @@ import React from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+const dahrshikaGallery = [
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.25.47 PM.jpeg',
+    title: 'Industrial Assembly Build',
+    description: 'Custom-fabricated assembly designed for dimensional stability and long production life.'
+  },
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.26.00 PM.jpeg',
+    title: 'Sheet Metal Execution',
+    description: 'Precision cutting, bending, and fit-up workflow handled with controlled process checks.'
+  },
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.26.10 PM.jpeg',
+    title: 'Machine Support Fabrication',
+    description: 'Heavy and medium fabrication support for load-bearing machine and utility structures.'
+  },
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.26.18 PM.jpeg',
+    title: 'Welded Structural Unit',
+    description: 'Strong welded joints and clean finishing prepared for dependable shop-floor operation.'
+  },
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.26.26 PM.jpeg',
+    title: 'Process Equipment Frame',
+    description: 'Fabricated frame engineered for easy installation, maintenance access, and durability.'
+  },
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.26.54 PM.jpeg',
+    title: 'Production-Ready Fabrication',
+    description: 'Component manufactured with close attention to drawing intent and repeatable output quality.'
+  },
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.27.00 PM.jpeg',
+    title: 'Custom Utility Structure',
+    description: 'Utility-focused fabricated structure suitable for plant integration and daily industrial use.'
+  },
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.27.05 PM.jpeg',
+    title: 'Engineering Fabrication Detail',
+    description: 'Practical build detail reflecting workmanship quality, precision alignment, and finish control.'
+  },
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.27.12 PM.jpeg',
+    title: 'Workshop Production Sample',
+    description: 'Sample output from active shop-floor execution across welding and assembly operations.'
+  },
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.30.26 PM.jpeg',
+    title: 'Industrial Project Snapshot',
+    description: 'Project milestone image representing end-to-end fabrication from plan to finished part.'
+  },
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.30.39 PM.jpeg',
+    title: 'Facility Capability Highlight',
+    description: 'In-facility output demonstrating practical execution for varied customer requirements.'
+  },
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.30.52 PM.jpeg',
+    title: 'Fabricated Product Display',
+    description: 'Completed product example showing consistency in build quality and visual finish.'
+  },
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.31.26 PM.jpeg',
+    title: 'Service Execution Result',
+    description: 'Service-backed fabrication delivered through planning, monitoring, and quality verification.'
+  },
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.31.37 PM.jpeg',
+    title: 'Manufacturing Process Output',
+    description: 'Manufacturing-stage output completed with coordinated fabrication and inspection activity.'
+  },
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.31.44 PM.jpeg',
+    title: 'Dispatch-Ready Job',
+    description: 'Finalized unit prepared for delivery after dimensional and workmanship validation.'
+  },
+  {
+    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.31.52 PM.jpeg',
+    title: 'Custom Project Finish',
+    description: 'Finished custom job supporting industrial operations with reliable structural performance.'
+  }
+];
+
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen">
@@ -32,8 +115,18 @@ const HomePage: React.FC = () => {
                 <span className="text-5xl md:text-7xl">SOLUTIONS</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/90 max-w-xl">
-                Precision heavy and medium fabrication for industrial engineering projects, machine enclosures, ducts, trolleys, racking systems, and custom assemblies
+                Precision heavy and medium fabrication for industrial engineering projects, machine enclosures, ducts, trolleys, racking systems, and custom assemblies.
               </p>
+              <p className="text-base md:text-lg text-white/80 max-w-xl leading-relaxed">
+                From drawing study and cost estimation to fabrication, inspection, and dispatch, we deliver practical fabrication support for OEMs, plant teams, and infrastructure projects.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {['ISO 9001:2015 QMS', '10,000 Sq. Ft. Facility', 'Custom Drawing-Based Work'].map((item) => (
+                  <span key={item} className="px-4 py-2 rounded-full bg-white/15 border border-white/30 text-sm font-medium">
+                    {item}
+                  </span>
+                ))}
+              </div>
               <div className="flex flex-wrap gap-4 pt-4">
                 <Link to="/products" className="bg-white text-primary hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center gap-2">
                   View Products
@@ -54,8 +147,8 @@ const HomePage: React.FC = () => {
                 {/* Main Circle with Image */}
                 <div className="relative aspect-square rounded-full overflow-hidden border-8 border-white/30 shadow-2xl transform hover:scale-105 transition-transform duration-500">
                   <img 
-                    src="/commercial-kitchen.jpg" 
-                    alt="Commercial Kitchen Equipment" 
+                    src="https://images.unsplash.com/photo-1532619187608-e5375cab36aa?auto=format&fit=crop&w=1200&q=80"
+                    alt="Industrial fabrication workshop"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -196,12 +289,12 @@ const HomePage: React.FC = () => {
             <div className="relative slide-in-left">
               <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/comercial-kitchen-2.jpg" 
-                  alt="Manufacturing Process" 
+                  src="/dahrshika-home-manufacturing.jpeg" 
+                  alt="Darshika Fab Tech manufacturing process" 
                   className="w-full h-full object-cover object-bottom"
                 />
-              </div>absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-xl
-              <div className="">
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-xl">
                 <div className="text-3xl font-bold">15+</div>
                 <div className="text-sm">Years in Business</div>
               </div>
@@ -217,6 +310,12 @@ const HomePage: React.FC = () => {
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
                 From drawing study and costing to in-process checks and final inspection, every job is monitored for quality, dimensional accuracy, and timely delivery.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Our team also supports production planning, material coordination, and process documentation so customers get predictable lead times and consistent output quality across repeat orders.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                We focus on practical manufacturing results: controlled workmanship, traceable stages, and clear communication at every checkpoint from project kickoff to final handover.
               </p>
               
               <div className="grid grid-cols-2 gap-4 pt-4">
@@ -238,6 +337,37 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dahrshika Image Gallery */}
+      <section className="py-20 gradient-light">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="section-title">Dahrshika <span className="text-primary">Project Gallery</span></h2>
+            <div className="h-1 w-24 bg-primary rounded mx-auto mb-6"></div>
+            <p className="section-subtitle max-w-4xl mx-auto">
+              A complete visual showcase from the `dahrshika-img` collection, highlighting real fabrication outputs across structural builds, custom assemblies, process units, and dispatch-ready jobs.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {dahrshikaGallery.map((item, index) => (
+              <div key={index} className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={encodeURI(item.image)}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

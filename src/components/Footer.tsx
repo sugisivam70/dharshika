@@ -19,11 +19,12 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold mb-4">
-              <span className="text-primary">BPL</span> EQUIPMENTS
+              <span className="text-primary">DARSHIKA</span> FAB TECH
             </h3>
             <p className="text-gray-400 mb-4">
-              Leading provider of commercial kitchen equipment solutions for
-              hotels, restaurants, cafes, and industrial kitchens.
+              Industrial fabrication partner for heavy and medium engineering
+              works, including machine enclosures, ducts, tanks, trolleys, and
+              custom metal assemblies.
             </p>
             <div className="flex gap-4">
               <a
@@ -43,7 +44,7 @@ const Footer: React.FC = () => {
                 <Facebook size={20} />
               </a>
               <a
-                href="https://wa.me/917676962769?text=Hi%20BPL%20I%27m%20interested%20in%20your%20product"
+                href="https://wa.me/919886610766?text=Hi%20Darshika%20Fab%20Tech%2C%20I%20need%20a%20fabrication%20quote."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 p-2 rounded-lg hover:scale-110 transition-transform"
@@ -109,16 +110,16 @@ const Footer: React.FC = () => {
                 <Phone size={20} className="text-primary mt-1 flex-shrink-0" />
                 <div>
                   <a
-                    href="tel:7676962769"
+                    href="tel:9886610766"
                     className="text-gray-400 hover:text-primary transition-colors block"
                   >
-                    +91 7676962769
+                    +91 9886610766
                   </a>
                   <a
-                    href="tel:8970599544"
+                    href="tel:7760639977"
                     className="text-gray-400 hover:text-primary transition-colors block"
                   >
-                    +91 8970599544
+                    +91 7760639977
                   </a>
                 </div>
               </li>
@@ -126,25 +127,21 @@ const Footer: React.FC = () => {
                 <Mail size={20} className="text-primary mt-1 flex-shrink-0" />
                 <div>
                   <a
-                    href="mailto:bplequipments@gmail.com"
+                    href="mailto:darshikafabtech.uv@gmail.com"
                     className="text-gray-400 hover:text-primary transition-colors block"
                   >
-                    bplequipments@gmail.com
-                  </a>
-                  <a
-                    href="mailto:Latheesh_nc@yahoo.com"
-                    className="text-gray-400 hover:text-primary transition-colors block"
-                  >
-                    Latheesh_nc@yahoo.com
+                    darshikafabtech.uv@gmail.com
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={20} className="text-primary mt-1 flex-shrink-0" />
                 <span className="text-gray-400">
-                  Peenya, Bengaluru,
+                  No. 128, Shed No. 5, 4th Phase,
                   <br />
-                  Karnataka 560058
+                  Near 9th Bus Depot, Peenya Industrial Area,
+                  <br />
+                  Peenya 2nd Stage, Bengaluru - 560058
                 </span>
               </li>
             </ul>
@@ -153,7 +150,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © {currentYear} BPL Equipments. All rights reserved.
+            © {currentYear} Darshika Fab Tech. All rights reserved.
           </p>
         </div>
       </div>

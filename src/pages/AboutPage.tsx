@@ -39,28 +39,27 @@ const AboutPage: React.FC = () => {
       {/* About Content */}
       <section className="py-20 gradient-light">
         <div className="container-custom">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left - Image */}
+          <div className="grid md:grid-cols-2 gap-10 items-stretch max-w-6xl mx-auto">
             <div className="relative slide-in-left">
-              <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-3xl"></div>
-              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
-                <img 
-                  src="/comercial-kitchen-3.jpg" 
-                  alt="Darshika Fab Tech Facility" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              {/* Decorative Dots */}
-              <div className="absolute top-10 right-10 grid grid-cols-3 gap-2 opacity-40">
-                {[...Array(9)].map((_, i) => (
-                  <div key={i} className="w-2 h-2 bg-primary rounded-full"></div>
-                ))}
+              <div className="space-y-4 h-full">
+                <div className="rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src={encodeURI('/dahrshika-img/WhatsApp Image 2026-04-02 at 12.30.39 PM.jpeg')}
+                    alt="Dahrshika Fab Tech gallery image"
+                    className="w-full h-[260px] object-cover"
+                  />
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src={encodeURI('/dahrshika-img/WhatsApp Image 2026-04-02 at 12.31.37 PM.jpeg')}
+                    alt="Dahrshika Fab Tech gallery fabrication image"
+                    className="w-full h-[260px] object-cover"
+                  />
+                </div>
               </div>
             </div>
 
-            {/* Right - Content */}
-            <div className="space-y-6 slide-in-right">
+            <div className="space-y-6 slide-in-right bg-white p-8 md:p-12 rounded-2xl shadow-lg">
               <h2 className="text-5xl font-bold text-gray-900">
                 ABOUT <span className="text-primary">DARSHIKA FAB TECH</span>
               </h2>
@@ -71,6 +70,21 @@ const AboutPage: React.FC = () => {
               <p className="text-lg text-gray-700 leading-relaxed">
                 We manufacture heavy and medium fabrication works including machine enclosures, cabinets, brackets, ducts, conveyors, trolleys, storage racking systems, and PEB support structures.
               </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Our approach combines mechanical engineering knowledge, production discipline, and close customer communication to ensure each fabricated component meets practical site and performance requirements.
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                {[
+                  'Dedicated zones for inspection, fabrication, and controlled material flow',
+                  'In-house team support for costing, process planning, and production follow-up',
+                  'Flexible execution for one-off custom jobs as well as repeat production'
+                ].map((point) => (
+                  <li key={point} className="flex items-start gap-3">
+                    <span className="w-2 h-2 mt-2 rounded-full bg-primary"></span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
               
               <div className="grid grid-cols-2 gap-6 pt-6">
                 <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">

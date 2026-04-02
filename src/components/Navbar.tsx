@@ -9,7 +9,6 @@ const Navbar: React.FC = () => {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Products", href: "/products" },
-    { name: "Gallery", href: "/gallery" },
     { name: "Services", href: "/services" },
     { name: "Contact", href: "/contact" },
   ];
@@ -21,13 +20,17 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img
-              src="/bpl-logo.png"
-              alt="BPL Equipments"
-              className="h-12 w-auto"
+              src="/public/logo2.jpeg"
+              alt="Darshika Fab Tech"
+              className="h-11 w-auto"
             />
-            <div className="text-2xl font-bold">
-              <span className="text-primary">BPL</span>
-              <span className="text-gray-800"> EQUIPMENTS</span>
+            <div className="leading-tight">
+              <div className="text-lg md:text-xl font-bold tracking-wide">
+                <span className="text-primary">DARSHIKA</span>
+              </div>
+              <div className="text-xs md:text-sm font-semibold text-gray-700">
+                FAB TECH
+              </div>
             </div>
           </Link>
 
@@ -48,7 +51,7 @@ const Navbar: React.FC = () => {
               </NavLink>
             ))}
             <Link to="/contact" className="btn-primary">
-              Get Quote
+              Request Quote
             </Link>
           </div>
 
@@ -79,7 +82,7 @@ const Navbar: React.FC = () => {
               className="block mt-4 text-center btn-primary"
               onClick={() => setIsMenuOpen(false)}
             >
-              Get Quote
+              Request Quote
             </Link>
           </div>
         )}

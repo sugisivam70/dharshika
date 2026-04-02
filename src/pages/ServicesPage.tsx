@@ -53,6 +53,53 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Service Intro */} 
+      <section className="py-20 gradient-warm">
+        <div className="container-custom">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-stretch">
+            <div className="space-y-4">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img
+                  src={encodeURI('/dahrshika-img/WhatsApp Image 2026-04-02 at 12.31.26 PM.jpeg')}
+                  alt="Dahrshika Fab Tech gallery service image"
+                  className="w-full h-[200px] object-cover"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img
+                  src={encodeURI('/dahrshika-img/WhatsApp Image 2026-04-02 at 12.31.44 PM.jpeg')}
+                  alt="Dahrshika Fab Tech gallery counter image"
+                  className="w-full h-[200px] object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-6 bg-white rounded-2xl shadow-lg p-8 md:p-12">
+              <h2 className="text-4xl font-bold text-gray-900">
+                End-to-End <span className="text-primary">Project Execution</span>
+              </h2>
+              <div className="h-1 w-24 bg-primary rounded"></div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                We support your project through every stage: requirement review, drawing clarification, process planning, fabrication, in-process quality checks, and final dispatch.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  'Technical discussion before production to avoid site-level fitment issues',
+                  'Material and timeline coordination for smooth execution',
+                  'Transparent status updates from kickoff to delivery',
+                  'Quality-first checks aligned with documented control processes'
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-gray-700">
+                    <span className="w-2 h-2 mt-2 rounded-full bg-primary"></span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section className="py-20 gradient-light relative overflow-hidden">
         {/* Background Decoration */}
@@ -90,11 +137,10 @@ const ServicesPage: React.FC = () => {
 
       {/* CTA Section with Background Image */}
       <section className="py-20 gradient-warm relative overflow-hidden">
-        {/* Background Image */}
         <div className="absolute inset-0 opacity-15">
           <img 
-            src="/commercial-kitchen-2.jpg" 
-            alt="Commercial Kitchen" 
+            src={encodeURI('/dahrshika-img/WhatsApp Image 2026-04-02 at 12.26.54 PM.jpeg')}
+            alt="Dahrshika Fab Tech gallery background visual" 
             className="w-full h-full object-cover"
           />
         </div>
