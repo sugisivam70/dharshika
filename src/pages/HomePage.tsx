@@ -33,46 +33,9 @@ const dahrshikaGallery = [
     title: 'Production-Ready Fabrication',
     description: 'Component manufactured with close attention to drawing intent and repeatable output quality.'
   },
-  {
-    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.27.00 PM.jpeg',
-    title: 'Custom Utility Structure',
-    description: 'Utility-focused fabricated structure suitable for plant integration and daily industrial use.'
-  },
-  {
-    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.27.05 PM.jpeg',
-    title: 'Engineering Fabrication Detail',
-    description: 'Practical build detail reflecting workmanship quality, precision alignment, and finish control.'
-  },
-  {
-    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.27.12 PM.jpeg',
-    title: 'Workshop Production Sample',
-    description: 'Sample output from active shop-floor execution across welding and assembly operations.'
-  },
-  {
-    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.30.26 PM.jpeg',
-    title: 'Industrial Project Snapshot',
-    description: 'Project milestone image representing end-to-end fabrication from plan to finished part.'
-  },
-  {
-    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.30.39 PM.jpeg',
-    title: 'Facility Capability Highlight',
-    description: 'In-facility output demonstrating practical execution for varied customer requirements.'
-  },
-  {
-    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.30.52 PM.jpeg',
-    title: 'Fabricated Product Display',
-    description: 'Completed product example showing consistency in build quality and visual finish.'
-  },
-  {
-    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.31.26 PM.jpeg',
-    title: 'Service Execution Result',
-    description: 'Service-backed fabrication delivered through planning, monitoring, and quality verification.'
-  },
-  {
-    image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.31.37 PM.jpeg',
-    title: 'Manufacturing Process Output',
-    description: 'Manufacturing-stage output completed with coordinated fabrication and inspection activity.'
-  },
+  
+ 
+  
   {
     image: '/dahrshika-img/WhatsApp Image 2026-04-02 at 12.31.44 PM.jpeg',
     title: 'Dispatch-Ready Job',
@@ -90,8 +53,18 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 gradient-blue opacity-95">
+        {/* Hero Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=1920&q=80"
+            alt="Professional industrial background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/75"></div>
+        </div>
+
+        {/* Gradient Layer */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/80 via-primary/70 to-primary-light/60">
           <div className="absolute top-20 right-20 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 left-20 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
@@ -147,8 +120,8 @@ const HomePage: React.FC = () => {
                 {/* Main Circle with Image */}
                 <div className="relative aspect-square rounded-full overflow-hidden border-8 border-white/30 shadow-2xl transform hover:scale-105 transition-transform duration-500">
                   <img 
-                    src="https://images.unsplash.com/photo-1532619187608-e5375cab36aa?auto=format&fit=crop&w=1200&q=80"
-                    alt="Industrial fabrication workshop"
+                    src={encodeURI('/public/commercial-kitchen.jpg')}
+                    alt="Industrial factory workspace"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -380,12 +353,13 @@ const HomePage: React.FC = () => {
             <div className="h-1 w-24 bg-primary rounded mx-auto mb-6"></div>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
             {[
               { img: '/burner-2.jpeg', name: 'Machine Base Fabrication' },
               { img: '/rack-3.jpeg', name: 'Storage and Handling Racks' },
-              { img: '/tea-coffee-counter.jpeg', name: 'Custom Process Counters' },
-              { img: '/chat-and-pavbaji-counter.jpeg', name: 'Sheet Metal Assemblies' }
+             
+              { img: '/burner-3.jpeg', name: 'Industrial Burner Fabrication' },
+              { img: '/holder-1.jpeg', name: 'Custom Holder Components' }
             ].map((product, index) => (
               <div key={index} className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="aspect-square overflow-hidden">
@@ -402,17 +376,7 @@ const HomePage: React.FC = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <a 
-              href="/CATLOGUE.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-secondary inline-flex items-center gap-2"
-            >
-              View Full Catalogue
-              <ArrowRight size={20} />
-            </a>
-          </div>
+          
         </div>
       </section>
     </div>
