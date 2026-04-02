@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send, Instagram, Facebook, Clock } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
+  const mapAddress =
+    'No. 128, Shed No. 5, 4th Phase, Near 9th Bus Depot, Peenya Industrial Area, Peenya 2nd Stage, Bengaluru, Karnataka 560058';
+  const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapAddress)}`;
+  const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(mapAddress)}&output=embed`;
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -95,7 +100,7 @@ const ContactPage: React.FC = () => {
                       Karnataka 560058
                     </p>
                     <a 
-                      href="https://maps.google.com/?q=Peenya+Industrial+Area+Bengaluru+560058"
+                      href={mapsLink}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-primary hover:underline mt-2 inline-block"
@@ -260,7 +265,7 @@ const ContactPage: React.FC = () => {
 
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.2512734861984!2d77.4923385!3d13.019664300000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3c92ba6741a9%3A0xe2b4272666c8a270!2sDarshika%20Fab%20Tech!5e0!3m2!1sen!2sin!4v1766902393827!5m2!1sen!2sin"
+              src={mapEmbedSrc}
               width="100%" 
               height="450" 
               style={{ border: 0 }} 

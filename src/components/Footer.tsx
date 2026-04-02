@@ -3,7 +3,6 @@ import {
   Phone,
   Mail,
   MapPin,
-  Instagram,
   Facebook,
   MessageCircle,
 } from "lucide-react";
@@ -27,14 +26,6 @@ const Footer: React.FC = () => {
               custom metal assemblies.
             </p>
             <div className="flex gap-4">
-              <a
-                href="https://www.instagram.com/bplequipments?igsh=MWtuYnA0eGo1ZjVsbw=="
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gradient-to-br from-purple-500 to-pink-500 p-2 rounded-lg hover:scale-110 transition-transform"
-              >
-                <Instagram size={20} />
-              </a>
               <a
                 href="https://www.facebook.com/share/17wp8Xp8ox/"
                 target="_blank"
@@ -73,14 +64,6 @@ const Footer: React.FC = () => {
                   className="text-gray-400 hover:text-primary transition-colors"
                 >
                   About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/products"
-                  className="text-gray-400 hover:text-primary transition-colors"
-                >
-                  Products
                 </Link>
               </li>
               <li>

@@ -101,8 +101,8 @@ const HomePage: React.FC = () => {
                 ))}
               </div>
               <div className="flex flex-wrap gap-4 pt-4">
-                <Link to="/products" className="bg-white text-primary hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center gap-2">
-                  View Products
+                <Link to="/services" className="bg-white text-primary hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center gap-2">
+                  View Services
                   <ArrowRight size={20} />
                 </Link>
                 <Link to="/contact" className="btn-secondary bg-white/10 border-white text-white hover:bg-white/10">
@@ -161,7 +161,7 @@ const HomePage: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-8 bg-white rounded-xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 fade-in-up">
               <div className="text-5xl mb-4">🏆</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Quality Products</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Quality Work</h3>
               <p className="text-gray-600">
                 High-accuracy sheet metal and structural fabrication built for demanding industrial use
               </p>
@@ -342,43 +342,16 @@ const HomePage: React.FC = () => {
               </div>
             ))}
           </div>
+
+          <div className="text-center mt-12">
+            <Link to="/products" className="btn-primary inline-flex items-center gap-2">
+              View All Products
+              <ArrowRight size={20} />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Featured Products Preview */}
-      <section className="py-20 gradient-light">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="section-title">Featured <span className="text-primary">Work Types</span></h2>
-            <div className="h-1 w-24 bg-primary rounded mx-auto mb-6"></div>
-          </div>
-
-          <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {[
-              { img: '/burner-2.jpeg', name: 'Machine Base Fabrication' },
-              { img: '/rack-3.jpeg', name: 'Storage and Handling Racks' },
-             
-              { img: '/burner-3.jpeg', name: 'Industrial Burner Fabrication' },
-              { img: '/holder-1.jpeg', name: 'Custom Holder Components' }
-            ].map((product, index) => (
-              <div key={index} className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="aspect-square overflow-hidden">
-                  <img 
-                    src={product.img} 
-                    alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-4 text-center">
-                  <h3 className="font-semibold text-gray-900">{product.name}</h3>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          
-        </div>
-      </section>
     </div>
   );
 };
