@@ -1,6 +1,6 @@
-import React from 'react';
-import { Image as ImageIcon } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Image as ImageIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 type Product = {
   img: string;
@@ -17,114 +17,105 @@ const VISIBLE_PRODUCT_LIMIT = 15;
 
 const productGroups: ProductGroup[] = [
   {
-    category: 'Gas Ranges',
-    folder: 'gas-ranges',
+    category: "Gas Ranges",
+    folder: "gas-ranges",
+    files: [],
+  },
+  {
+    category: "Worktable",
+    folder: "worktable",
     files: [
-     
-      '221597.jpg',
-      '225679.jpg',
-      '238424.jpg',
-      '239205.jpg',
-      '242288.jpg',
-      '242289.jpg',
-      '242407.jpg',
-      '242408.jpg',
-      '242412.jpg',
-      '243352.jpg',
-      '247988.jpg',
-      '247989.jpg',
-      '248159.jpg',
+      "product1.jpeg",
+      "product2.jpeg",
+      "238982.jpg",
+      "238983.jpg",
+      "product3.jpeg",
+      "product6.jpeg",
+      "product10.jpeg",
+      "product8.jpeg",
+      'product9.jpeg',
+      "242245.jpg",
+      "242314.jpg",
+      "245469.jpg",
+      "product4.jpeg",
     ],
   },
   {
-    category: 'Worktable',
-    folder: 'worktable',
+    category: "Sinks",
+    folder: "sinks",
     files: [
-      '238982.jpg',
-      '238983.jpg',
-      '242245.jpg',
-      '242314.jpg',
-      '245469.jpg',
-      'WhatsApp Image 2026-02-04 at 3.38.24 PM.jpeg',
+      "221600.jpg",
+      "221601.jpg",
+      "221602.jpg",
+      "238872.jpg",
+      "239025.jpg",
+      "242409.jpg",
+      "242410.jpg",
+      "244127.jpg",
+      "246490.jpg",
+      "3 SINK UNIT.jpg",
+      "IMG-20260204-WA0017.jpg",
+      "IMG-20260204-WA0060.jpg",
     ],
   },
   {
-    category: 'Sinks',
-    folder: 'sinks',
+    category: "Steam Equipment",
+    folder: "steam-eqp",
+    files: [],
+  },
+  {
+    category: "Exhaust & Fresh Air",
+    folder: "exhaust&fresh-air",
     files: [
-      '1000025951.jpg',
-      '221600.jpg',
-      '221601.jpg',
-      '221602.jpg',
-      '238872.jpg',
-      '239025.jpg',
-      '242409.jpg',
-      '242410.jpg',
-      '244127.jpg',
-      '246490.jpg',
-      '3 SINK UNIT.jpg',
-      'IMG-20260204-WA0017.jpg',
-      'IMG-20260204-WA0060.jpg',
+      "WhatsApp Image 2026-02-04 at 2.53.34 PM.jpeg",
+      "WhatsApp Image 2026-02-04 at 2.53.35 PM.jpeg",
+      "WhatsApp Image 2026-02-04 at 2.53.36 PM.jpeg",
+      "WhatsApp Image 2026-02-04 at 2.53.46 PM.jpeg",
     ],
   },
   {
-    category: 'Steam Equipment',
-    folder: 'steam-eqp',
-    files: ['222420.jpg', '222421.jpg', '222422.jpg', '222423.jpg', '238483.jpg'],
-  },
-  {
-    category: 'Exhaust & Fresh Air',
-    folder: 'exhaust&fresh-air',
+    category: "Bakery Equipments",
+    folder: "bakery-equipments",
     files: [
-      'WhatsApp Image 2026-02-04 at 2.53.34 PM.jpeg',
-      'WhatsApp Image 2026-02-04 at 2.53.35 PM.jpeg',
-      'WhatsApp Image 2026-02-04 at 2.53.36 PM.jpeg',
-      'WhatsApp Image 2026-02-04 at 2.53.46 PM.jpeg',
+      "WhatsApp Image 2026-02-04 at 3.05.21 PM.jpeg",
+      "WhatsApp Image 2026-02-04 at 3.07.09 PM.jpeg",
+      "WhatsApp Image 2026-02-04 at 3.15.57 PM.jpeg",
+      "WhatsApp Image 2026-02-04 at 3.17.22 PM.jpeg",
     ],
   },
   {
-    category: 'Bakery Equipments',
-    folder: 'bakery-equipments',
+    category: "Bainmaries",
+    folder: "bainmaries",
     files: [
-      'WhatsApp Image 2026-02-04 at 3.05.21 PM.jpeg',
-      'WhatsApp Image 2026-02-04 at 3.07.09 PM.jpeg',
-      'WhatsApp Image 2026-02-04 at 3.15.57 PM.jpeg',
-      'WhatsApp Image 2026-02-04 at 3.17.22 PM.jpeg',
+      "238479.jpg",
+      "238480.jpg",
+      "238481.jpg",
+      "245628.jpg",
+      "245629.jpg",
+      "IMG-20260204-WA0018.jpg",
+      "WhatsApp Image 2026-02-04 at 3.26.32 PM.jpeg",
+      "WhatsApp Image 2026-02-04 at 3.27.32 PM.jpeg",
+      "WhatsApp Image 2026-02-04 at 3.30.30 PM.jpeg",
+      "WhatsApp Image 2026-02-04 at 3.32.44 PM.jpeg",
+      "WhatsApp Image 2026-02-04 at 3.47.58 PM.jpeg",
     ],
   },
   {
-    category: 'Bainmaries',
-    folder: 'bainmaries',
-    files: [
-      '238479.jpg',
-      '238480.jpg',
-      '238481.jpg',
-      '245628.jpg',
-      '245629.jpg',
-      'IMG-20260204-WA0018.jpg',
-      'WhatsApp Image 2026-02-04 at 3.26.32 PM.jpeg',
-      'WhatsApp Image 2026-02-04 at 3.27.32 PM.jpeg',
-      'WhatsApp Image 2026-02-04 at 3.30.30 PM.jpeg',
-      'WhatsApp Image 2026-02-04 at 3.32.44 PM.jpeg',
-      'WhatsApp Image 2026-02-04 at 3.47.58 PM.jpeg',
-    ],
+    category: "Racks",
+    folder: "racks",
+    files: ["pot-racks.jpg", "racks2.jpg", "trolly.jpg"],
   },
   {
-    category: 'Racks',
-    folder: 'racks',
-    files: ['pot-racks.jpg', 'racks2.jpg', 'trolly.jpg'],
-  },
-  {
-    category: 'Other Products',
-    files: ['IMG-20260204-WA0013.jpg', 'IMG-20260204-WA0015.jpg'],
+    category: "Other Products",
+    files: ["IMG-20260204-WA0013.jpg", "IMG-20260204-WA0015.jpg"],
   },
 ];
 
 const formatProductName = (fileName: string): string =>
   fileName
-    .replace(/\.[^/.]+$/, '')
-    .replace(/[-_]/g, ' ')
-    .replace(/\s+/g, ' ')
+    .replace(/\.[^/.]+$/, "")
+    .replace(/[-_]/g, " ")
+    .replace(/\s+/g, " ")
     .trim();
 
 const products: Product[] = productGroups.flatMap((group) =>
@@ -147,10 +138,12 @@ const ProductsPage: React.FC = () => {
     <div className="min-h-screen pt-10">
       <section className="py-10 md:py-20 gradient-blue text-white">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-3 md:mb-6">Our Products</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-3 md:mb-6">
+            Our Products
+          </h1>
           <p className="text-lg md:text-2xl text-white/90 max-w-3xl mx-auto">
-            Product images loaded from the dharshika-prd collection. Open any card to view
-            the full image on a new page.
+            Product images loaded from the dharshika-prd collection. Open any
+            card to view the full image on a new page.
           </p>
         </div>
       </section>

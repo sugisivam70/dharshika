@@ -1,32 +1,46 @@
-import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Send, Instagram, Facebook, Clock } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Send,
+  Instagram,
+  Facebook,
+  Clock,
+} from "lucide-react";
 
 const ContactPage: React.FC = () => {
-  const mapAddress =
-    'No. 128, Shed No. 5, 4th Phase, Near 9th Bus Depot, Peenya Industrial Area, Peenya 2nd Stage, Bengaluru, Karnataka 560058';
-  const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapAddress)}`;
-  const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(mapAddress)}&output=embed`;
+  useEffect(() => {
+    document.title = "🏭 Contact Us - Darshika Fab Tech";
+  }, []);
+  const mapsLink = `https://www.google.com/maps/place/Darshika+Fab+Tech/@13.0239818,77.4986987,808m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bae3d002ce162ab:0x5ecfd475bc3d7fe6!8m2!3d13.0239766!4d77.5012736!16s%2Fg%2F11ywhpn9bm`;
+  const mapEmbedSrc =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8747788929677!2d77.49869870000001!3d13.023981799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d002ce162ab%3A0x5ecfd475bc3d7fe6!2sDarshika%20Fab%20Tech!5e0!3m2!1sen!2sin!4v1713187200000";
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    console.log("Form submitted:", formData);
+    alert("Thank you for your message! We will get back to you soon.");
+    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -37,7 +51,8 @@ const ContactPage: React.FC = () => {
         <div className="container-custom text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-            Connect with Darshika Fab Tech for heavy and medium fabrication inquiries
+            Connect with Darshika Fab Tech for heavy and medium fabrication
+            inquiries
           </p>
         </div>
       </section>
@@ -49,9 +64,12 @@ const ContactPage: React.FC = () => {
             {/* Contact Information */}
             <div className="space-y-8 slide-in-left">
               <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                  Get In Touch
+                </h3>
                 <p className="text-gray-600 mb-8">
-                  We are ready to support your project with fabrication planning, technical coordination, and production execution.
+                  We are ready to support your project with fabrication
+                  planning, technical coordination, and production execution.
                   Reach us directly through the channels below.
                 </p>
               </div>
@@ -60,14 +78,23 @@ const ContactPage: React.FC = () => {
                 {/* Phone */}
                 <div className="flex items-start gap-4 group">
                   <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary transition-colors">
-                    <Phone className="text-primary group-hover:text-white transition-colors" size={24} />
+                    <Phone
+                      className="text-primary group-hover:text-white transition-colors"
+                      size={24}
+                    />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                    <a href="tel:9886610766" className="text-gray-600 hover:text-primary transition-colors block">
+                    <a
+                      href="tel:9886610766"
+                      className="text-gray-600 hover:text-primary transition-colors block"
+                    >
                       +91 9886610766
                     </a>
-                    <a href="tel:7760639977" className="text-gray-600 hover:text-primary transition-colors block">
+                    <a
+                      href="tel:7760639977"
+                      className="text-gray-600 hover:text-primary transition-colors block"
+                    >
                       +91 7760639977
                     </a>
                   </div>
@@ -76,11 +103,17 @@ const ContactPage: React.FC = () => {
                 {/* Email */}
                 <div className="flex items-start gap-4 group">
                   <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary transition-colors">
-                    <Mail className="text-primary group-hover:text-white transition-colors" size={24} />
+                    <Mail
+                      className="text-primary group-hover:text-white transition-colors"
+                      size={24}
+                    />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                    <a href="mailto:darshikafabtech.uv@gmail.com" className="text-gray-600 hover:text-primary transition-colors">
+                    <a
+                      href="mailto:darshikafabtech.uv@gmail.com"
+                      className="text-gray-600 hover:text-primary transition-colors"
+                    >
                       darshikafabtech.uv@gmail.com
                     </a>
                   </div>
@@ -89,19 +122,27 @@ const ContactPage: React.FC = () => {
                 {/* Address */}
                 <div className="flex items-start gap-4 group">
                   <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary transition-colors">
-                    <MapPin className="text-primary group-hover:text-white transition-colors" size={24} />
+                    <MapPin
+                      className="text-primary group-hover:text-white transition-colors"
+                      size={24}
+                    />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
+                    <h4 className="font-semibold text-gray-900 mb-1">
+                      Address
+                    </h4>
                     <p className="text-gray-600">
-                      No. 128, Shed No. 5, 4th Phase,<br />
-                      Near 9th Bus Depot, Peenya Industrial Area,<br />
-                      Peenya 2nd Stage, Bengaluru,<br />
+                      No. 128, Shed No. 5, 4th Phase,
+                      <br />
+                      Near 9th Bus Depot, Peenya Industrial Area,
+                      <br />
+                      Peenya 2nd Stage, Bengaluru,
+                      <br />
                       Karnataka 560058
                     </p>
-                    <a 
+                    <a
                       href={mapsLink}
-                      target="_blank" 
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary hover:underline mt-2 inline-block"
                     >
@@ -113,12 +154,18 @@ const ContactPage: React.FC = () => {
                 {/* Business Hours */}
                 <div className="flex items-start gap-4 group">
                   <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary transition-colors">
-                    <Clock className="text-primary group-hover:text-white transition-colors" size={24} />
+                    <Clock
+                      className="text-primary group-hover:text-white transition-colors"
+                      size={24}
+                    />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Business Hours</h4>
+                    <h4 className="font-semibold text-gray-900 mb-1">
+                      Business Hours
+                    </h4>
                     <p className="text-gray-600">
-                      Monday - Saturday: 9:00 AM - 6:30 PM<br />
+                      Monday - Saturday: 9:00 AM - 6:30 PM
+                      <br />
                       Sunday: Closed
                     </p>
                   </div>
@@ -127,20 +174,22 @@ const ContactPage: React.FC = () => {
                 {/* Social Media */}
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/10 p-3 rounded-lg">
-                    <span className="text-primary font-semibold">Follow Us</span>
+                    <span className="text-primary font-semibold">
+                      Follow Us
+                    </span>
                   </div>
                   <div className="flex gap-4">
-                    <a 
-                      href="https://www.instagram.com/bplequipments?igsh=MWtuYnA0eGo1ZjVsbw==" 
-                      target="_blank" 
+                    <a
+                      href="https://www.instagram.com/bplequipments?igsh=MWtuYnA0eGo1ZjVsbw=="
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="bg-gradient-to-br from-purple-500 to-pink-500 p-3 rounded-lg hover:scale-110 transition-transform"
                     >
                       <Instagram className="text-white" size={24} />
                     </a>
-                    <a 
-                      href="https://www.facebook.com/share/17wp8Xp8ox/" 
-                      target="_blank" 
+                    <a
+                      href="https://www.facebook.com/share/17wp8Xp8ox/"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="bg-blue-600 p-3 rounded-lg hover:scale-110 transition-transform"
                     >
@@ -153,10 +202,15 @@ const ContactPage: React.FC = () => {
 
             {/* Contact Form */}
             <div className="bg-white p-8 rounded-2xl shadow-lg slide-in-right">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Send us a Message
+              </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-gray-700 font-medium mb-2"
+                  >
                     Your Name *
                   </label>
                   <input
@@ -172,7 +226,10 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-gray-700 font-medium mb-2"
+                  >
                     Email Address *
                   </label>
                   <input
@@ -188,7 +245,10 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-gray-700 font-medium mb-2"
+                  >
                     Phone Number
                   </label>
                   <input
@@ -203,7 +263,10 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-gray-700 font-medium mb-2"
+                  >
                     Subject *
                   </label>
                   <select
@@ -224,7 +287,10 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-gray-700 font-medium mb-2"
+                  >
                     Message *
                   </label>
                   <textarea
@@ -256,7 +322,9 @@ const ContactPage: React.FC = () => {
       <section className="py-20 gradient-warm">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="section-title">Find <span className="text-primary">Us</span></h2>
+            <h2 className="section-title">
+              Find <span className="text-primary">Us</span>
+            </h2>
             <div className="h-1 w-24 bg-primary rounded mx-auto mb-6"></div>
             <p className="section-subtitle">
               Visit our fabrication unit in Peenya Industrial Area
@@ -264,13 +332,13 @@ const ContactPage: React.FC = () => {
           </div>
 
           <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <iframe 
+            <iframe
               src={mapEmbedSrc}
-              width="100%" 
-              height="450" 
-              style={{ border: 0 }} 
-              allowFullScreen 
-              loading="lazy" 
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Darshika Fab Tech Location"
             ></iframe>
