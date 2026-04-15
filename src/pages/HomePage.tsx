@@ -139,7 +139,7 @@ const HomePage: React.FC = () => {
                 {/* Main Circle with Image */}
                 <div className="relative aspect-square rounded-full overflow-hidden border-8 border-white/30 shadow-2xl transform hover:scale-105 transition-transform duration-500">
                   <img
-                    src={encodeURI("/public/commercial-kitchen.jpg")}
+                    src={encodeURI("/commercial-kitchen.jpg")}
                     alt="Industrial factory workspace"
                     className="w-full h-full object-cover"
                   />
